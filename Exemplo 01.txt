@@ -1,0 +1,47 @@
+class Pessoa2{
+  String? _nome;
+  int? _idade;
+  
+  //Construtor Padrão
+  Pessoa2(){
+    nome = "";
+    idade = 0;
+    
+  }
+  
+  //Construtor Nomeado
+  Pessoa2.comNome(this._nome, this._idade);
+  
+  String get nome => _nome!;
+  
+  set nome (String value){
+    _nome = value;
+  }
+  
+  int get idade => _idade!;
+  
+  set idade(int value){
+    _idade = value;
+  }
+}
+
+void main (){
+   
+  //Padrão
+  Pessoa2 pessoa = new Pessoa2();
+  
+  pessoa.nome="Tom Cruise";
+  pessoa.idade = 60;
+  
+  print("=====================Pessoa 1 =====================");
+  print ("Nome:" + pessoa.nome);
+  print ("Idade: ${pessoa.idade}");
+  
+  //Nomeado
+  Pessoa2 pessoa2 = new Pessoa2.comNome("Messi",36);
+  
+  print("======================Pessoa 2 ===================");
+  print ("Nome: " + pessoa2.nome);
+  print ("Idade: ${pessoa2.idade}");
+    
+}

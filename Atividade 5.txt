@@ -1,0 +1,73 @@
+class Consulta { 
+
+  String? _data; 
+  String? _nomePcnte; 
+  String? _nomeDents; 
+
+  Consulta() { 
+    data = ""; 
+    nomePcnte = ""; 
+    nomeDents = ""; 
+  } 
+  Consulta.comConsulta(this._data, this._nomePcnte, this._nomeDents); 
+
+  Consulta.comData(this._data); 
+  
+  Consulta.comNomePaciente(this._nomePcnte); 
+  Consulta.comNomeDentista(this._nomeDents); 
+
+  String get data => _data!; 
+
+  set data(String value) { 
+    _data = value; 
+  } 
+
+   
+  String get nomePcnte => _nomePcnte!; 
+
+  set nomePcnte(String value) { 
+    _nomePcnte = value; 
+  } 
+  
+  String get nomeDents => _nomeDents!; 
+
+  set nomeDents(String value) { 
+    _nomeDents = value; 
+  } 
+} 
+
+  
+
+void main() { 
+
+  Consulta consulta = new Consulta(); 
+  consulta.data = "13/10/2024"; 
+  consulta.nomePcnte = "Otavio"; 
+  consulta.nomeDents = "Jéssica"; 
+ 
+  print("==================Consulta 1=================="); 
+  print("Data: " + consulta.data); 
+  print("Nome do paciente: " + consulta.nomePcnte); 
+  print("Nome do dentista: " + consulta.nomeDents); 
+  
+  Consulta consulta2 = new Consulta(); 
+  consulta2.data = "02/05/2024"; 
+  consulta2.nomePcnte = "Maria"; 
+  consulta2.nomeDents = "Roberta"; 
+  
+  print("==================Consulta 2=================="); 
+  print("Data: " + consulta2.data); 
+  print("Nome do paciente: " + consulta2.nomePcnte); 
+  print("Nome do dentista: " + consulta2.nomeDents); 
+  
+  Consulta consulta3 = new Consulta(); 
+  consulta3.data = "06/04/2024"; 
+  consulta3.nomePcnte = "Fátima"; 
+  consulta3.nomeDents = "Wesley";  
+  
+  print("==================Consulta 3=================="); 
+  print("Data: " + consulta3.data); 
+  print("Nome do paciente: " + consulta3.nomePcnte); 
+  print("Nome do dentista: " + consulta3.nomeDents); 
+
+} 

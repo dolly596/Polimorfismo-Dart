@@ -1,0 +1,58 @@
+class Animal { 
+
+  double? _tamanho; 
+  String? _cor; 
+
+  Animal() { 
+    tamanho = 0; 
+    cor = ""; 
+  } 
+  Animal.comNumChassiPlaca(this._tamanho, this._cor); 
+
+  Animal.comTamanho(this._tamanho); 
+  
+  Animal.comCor(this._cor); 
+
+  double get tamanho => _tamanho!; 
+
+  set tamanho(double value) { 
+    _tamanho = value; 
+  } 
+
+   
+  String get cor => _cor!; 
+
+  set cor(String value) { 
+    _cor = value; 
+  } 
+} 
+
+  
+
+void main() { 
+
+  Animal animal = new Animal(); 
+  animal.tamanho = 10.0; 
+  animal.cor = "Amarela"; 
+ 
+  print("==================Animal 1=================="); 
+  print("Tamanho: ${animal.tamanho}"); 
+  print("Cor: " + animal.cor); 
+  
+  Animal animal2 = new Animal(); 
+  animal2.tamanho = 20.0; 
+  animal2.cor = "Vermelho"; 
+  
+   print("==================Animal 2=================="); 
+  print("Tamanho: ${animal.tamanho}"); 
+  print("Cor:  ${animal2.cor}"); 
+  
+  Animal animal3 = new Animal(); 
+  animal3.tamanho = 15.0; 
+  animal3.cor = "Verde"; 
+  
+   print("==================Animal 3=================="); 
+  print("Tamanho: ${animal.tamanho}"); 
+  print("Cor:  ${animal3.cor}"); 
+
+} 

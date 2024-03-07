@@ -1,0 +1,58 @@
+class Carro { 
+
+  String? _placa; 
+  int? _numChassi; 
+
+  Carro() { 
+    placa = ""; 
+    numChassi = 0; 
+  } 
+  Carro.comNumChassiPlaca(this._placa, this._numChassi); 
+
+  Carro.comNome(this._placa); 
+  
+  Carro.comIdade(this._numChassi); 
+
+  String get placa => _placa!; 
+
+  set placa(String value) { 
+    _placa = value; 
+  } 
+
+   
+  int get numChassi => _numChassi!; 
+
+  set numChassi(int value) { 
+    _numChassi = value; 
+  } 
+} 
+
+  
+
+void main() { 
+
+  Carro carro = new Carro(); 
+  carro.placa = "AMD3060"; 
+  carro.numChassi = 3; 
+ 
+  print("==================Carro 1=================="); 
+  print("Placa: " + carro.placa); 
+  print("NumeroChassi:  ${carro.numChassi}"); 
+  
+  Carro carro2 = new Carro(); 
+  carro2.placa = "ENN1170"; 
+  carro2.numChassi = 10; 
+  
+   print("==================Carro 2=================="); 
+  print("Placa: " + carro2.placa); 
+  print("NumeroChassi:  ${carro2.numChassi}"); 
+  
+  Carro carro3 = new Carro(); 
+  carro3.placa = "DJA8090"; 
+  carro3.numChassi = 10; 
+  
+   print("==================Carro 3=================="); 
+  print("Placa: " + carro3.placa); 
+  print("NumeroChassi:  ${carro3.numChassi}"); 
+
+} 
